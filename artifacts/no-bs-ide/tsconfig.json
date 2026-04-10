@@ -1,0 +1,27 @@
+{
+"extends": "../../tsconfig.base.json",
+
+"include": ["src"],
+
+"compilerOptions": {
+"jsx": "react-jsx",
+"lib": ["ESNext", "DOM"],
+
+"moduleResolution": "bundler",
+
+"resolveJsonModule": true,
+"allowImportingTsExtensions": true,
+
+"types": ["node", "vite/client"],
+
+"baseUrl": ".",
+"paths": {
+  "@/*": ["src/*"]
+}
+
+},
+
+"references": [
+{ "path": "../../lib/api-client-react" }
+]
+}

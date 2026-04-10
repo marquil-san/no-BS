@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "no-BS Python IDE"
+version = "1.0.0"
+id = "artifacts/no-bs-ide"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18488
+
+[services.development]
+run = "pnpm --filter @workspace/no-bs-ide run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/no-bs-ide", "run", "build" ]
+publicDir = "artifacts/no-bs-ide/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18488"
+BASE_PATH = "/"

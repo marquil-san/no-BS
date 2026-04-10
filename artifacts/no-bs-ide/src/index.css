@@ -1,0 +1,247 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* =========================
+   THEME TOKENS
+========================= */
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --font-mono: Menlo, Monaco, 'Courier New', monospace;
+}
+
+/* =========================
+   ROOT COLORS
+========================= */
+:root {
+  --background: 213 25% 6%;
+  --foreground: 210 17% 90%;
+  --border: 215 14% 19%;
+  --primary: 212 92% 68%;
+  --primary-foreground: 213 25% 6%;
+  --muted: 215 14% 19%;
+  --muted-foreground: 215 14% 50%;
+}
+
+/* =========================
+   BASE RESET
+========================= */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: transparent; /* ✅ IMPORTANT */
+    color: #e6edf3;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* =========================
+   🔥 TERMINAL FIX (FULL TRANSPARENCY)
+========================= */
+
+.xterm,
+.xterm-viewport,
+.xterm-screen,
+.xterm-rows,
+.xterm-scroll-area {
+  background: transparent !important;
+}
+
+.xterm {
+  height: 100%;
+  padding: 4px;
+}
+
+.xterm-viewport {
+  overflow-y: auto !important;
+}
+
+/* =========================
+   🔥 MONACO FIX (NO BLACK LINES)
+========================= */
+
+.monaco-editor,
+.monaco-editor .margin,
+.monaco-editor .monaco-editor-background,
+.monaco-editor .inputarea,
+.monaco-editor .inputarea.ime-input {
+  background: transparent !important;
+}
+
+/* Remove weird overlays */
+.monaco-editor .decorationsOverviewRuler {
+  display: none;
+}
+
+/* =========================
+   RESIZE HANDLE
+========================= */
+[data-panel-resize-handle-enabled] {
+  transition: background-color 0.15s ease;
+}
+
+/* =========================
+   🔥 SAFE TOKEN ANIMATION SYSTEM
+========================= */
+
+@keyframes tokenPulse {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(1.35); }
+  100% { filter: brightness(1); }
+}
+
+@keyframes tokenGlow {
+  0% { text-shadow: 0 0 2px currentColor; }
+  50% { text-shadow: 0 0 6px currentColor; }
+  100% { text-shadow: 0 0 2px currentColor; }
+}
+
+@layer utilities {
+  .token-pulse {
+    animation: tokenPulse 2s ease-in-out infinite;
+  }
+
+  .token-glow {
+    animation: tokenGlow 2s ease-in-out infinite;
+  }
+}
+
+/* =========================
+   🚀 OVERLAY SYSTEM (UNCHANGED)
+========================= */
+
+.editor-container {
+  position: relative;
+}
+
+.editor-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+
+  font-family: var(--font-mono);
+  font-size: inherit;
+  line-height: inherit;
+
+  white-space: pre;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+.overlay-gradient-text {
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #a78bfa,
+    #22d3ee,
+    #60a5fa
+  );
+  background-size: 300% 100%;
+  animation: overlayFlow 4s linear infinite;
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes overlayFlow {
+  0% { background-position-x: 0%; }
+  100% { background-position-x: 200%; }
+}
+
+/* =========================
+   🔥 FINAL TRANSPARENCY FIXES
+========================= */
+
+/* ✅ clean transparent terminal */
+.xterm,
+.xterm-viewport,
+.xterm-screen,
+.xterm-rows,
+.xterm-row {
+  background: transparent !important;
+}
+
+/* ✅ selection fix */
+.xterm ::selection {
+  background: rgba(0, 255, 0, 0.3);
+  color: white;
+}
+
+/* ✅ nice glow (optional but looks good) */
+.xterm {
+  text-shadow: 0 0 4px #00ff9c;
+}
+
+
+
+
+/* --- MONACO: fully hide base text layer --- */
+.monaco-editor .view-lines {
+  color: transparent !important;
+}
+
+.monaco-editor .view-line span {
+  color: transparent !important;
+}
+
+.monaco-editor .mtk {
+  color: transparent !important;
+}
+
+.monaco-editor .cursor {
+  background-color: #58a6ff !important;
+}
+
+/* --- keep overlays (cursor, selection) clean --- */
+.monaco-editor .view-overlays,
+.monaco-editor .current-line,
+.monaco-editor .margin-view-overlays,
+.monaco-editor .cursor-line-style {
+  background: transparent !important;
+}
+
+
+.xterm .xterm-rows {
+  background: transparent !important;
+}
+
+.monaco-editor .suggest-widget {
+  z-index: 1000 !important;
+}
+
+.monaco-editor .parameter-hints-widget {
+  z-index: 1000 !important;
+}
+
+/* 💥 KILL sticky scroll completely */
+.monaco-editor .sticky-widget {
+  display: none !important;
+}
+
+/* extra safety (Monaco variants) */
+.monaco-editor .monaco-sticky-scroll {
+  display: none !important;
+}
