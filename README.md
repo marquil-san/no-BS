@@ -30,7 +30,7 @@ but ALSO:
 
 ## 🚀 how to run this masterpiece
 
-download it unzip it and follow these steps
+Download ZIP, then unzip it and follow these steps
 
 step 1 (DO NOT SKIP OR EVERYTHING EXPLODES):
 
