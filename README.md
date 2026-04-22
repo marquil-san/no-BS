@@ -4,6 +4,15 @@
 
 # 🐍🔥 ULTRA EPIC PYTHON IDE (no-bullshi-) 🔥🐍
 
+![JavaScript](https://img.shields.io/badge/language-JavaScript-yellow)
+![Electron](https://img.shields.io/badge/framework-Electron-47848F)
+![Python](https://img.shields.io/badge/python-supported-blue)
+![Status](https://img.shields.io/badge/status-chaotic--but--working-brightgreen)
+![Version](https://img.shields.io/badge/version-1.0-blue)
+![License](https://img.shields.io/badge/license-MIT-purple)
+![Built With Pain](https://img.shields.io/badge/built%20with-pain-red)
+![Works On My Machine](https://img.shields.io/badge/works-on%20my%20machine-success)
+
 > yes this exists
 > no it shouldn’t
 > yes it works (mostly)
