@@ -1,140 +1,158 @@
 ![SS](./screenshot.png)
 
-# That's a video in the background, all tokens are animating too
+# No-BS Python IDE
 
-# 🐍🔥 ULTRA EPIC PYTHON IDE (no-bullshi-) 🔥🐍
+A customizable Python IDE built with Electron.
+
+---
 
 ![JavaScript](https://img.shields.io/badge/language-JavaScript-yellow)
 ![Electron](https://img.shields.io/badge/framework-Electron-47848F)
 ![Python](https://img.shields.io/badge/python-supported-blue)
-![Status](https://img.shields.io/badge/status-chaotic--but--working-brightgreen)
 ![Version](https://img.shields.io/badge/version-1.0-blue)
 ![License](https://img.shields.io/badge/license-MIT-purple)
-![Built With Pain](https://img.shields.io/badge/built%20with-pain-red)
-![Works On My Machine](https://img.shields.io/badge/works-on%20my%20machine-success)
-
-> yes this exists
-> no it shouldn’t
-> yes it works (mostly)
+![Status](https://img.shields.io/badge/status-experimental-orange)
 
 ---
 
-## 💀 what is this
-
-this is a **custom python IDE** made with **electron** because clearly i enjoy suffering 👍
-
-it is:
-
-* not perfect ❌
-* kinda buggy 🐛
-* held together by hopes, dreams, and questionable decisions 🧠
-
-but ALSO:
-
-* actually usable 😳
-* kinda cool 👀
-* better than most ides out there (cope if you disagree)
+> Yes, the background is a video.  
+> Yes, syntax tokens animate.  
+> Yes, this somehow works.
 
 ---
 
-## 🚀 how to run this masterpiece
+## Overview
 
-Download ZIP, then unzip it and follow these steps
+No-BS Python IDE is an experimental Python IDE built using Electron.
 
-step 1 (DO NOT SKIP OR EVERYTHING EXPLODES):
+The project started as a learning experiment and evolved into a fully usable editor focused on customization, simplicity, and visual effects.
 
-```
+It is intentionally unconventional and not designed to replace professional IDEs like VS Code or PyCharm.
+
+---
+
+<details>
+<summary><b>Features</b></summary>
+
+<br>
+
+- Built-in Python execution
+- Per-token syntax customization
+- Animated video backgrounds
+- Lightweight and fast startup
+- Beginner-friendly interface
+- Dynamic editor visuals
+- Minimal setup process
+
+</details>
+
+---
+
+<details>
+<summary><b>Installation</b></summary>
+
+<br>
+
+### 1. Install root dependencies
+
+```bash
 pnpm install
 ```
 
-(run this in the **root directory**)
+### 2. Install IDE dependencies
 
-step 2 (YES AGAIN):
-
-```
+```bash
 cd no-bs-ide
 pnpm install
 ```
 
-step 3:
+### 3. Launch the IDE
 
+```bash
+script.bat
 ```
-*double click* script.bat
-```
 
-that’s it. no config. no setup. no braincells required.
-it just launches. like magic. ✨
+No additional setup is required.
 
----
-
-## 🧭 where tf are the settings
-
-top left.
-literally top left.
-
-if you can’t find it, that’s a skill issue.
+</details>
 
 ---
 
-## 🧠 features (yes it has those)
+<details>
+<summary><b>Customization</b></summary>
 
-* 🐍 built-in python interpreter (no setup pain, just vibes)
-* 🎨 **per-token customization** (yeah, EVERY token. go insane.)
-* 🎥 background VIDEO support (your IDE can now distract you 🔥)
-* ⚡ fast-ish (depends on your life choices)
-* 🧩 beginner friendly (this is NOT for giga-brain devs)
+<br>
 
----
+You can customize:
 
-## 🎨 customization (aka ruin your eyesight speedrun)
+- Background color
+- Background image
+- Background video
+- Individual Syntax token appearance
+- General UI styling
 
-you can change:
+The editor is designed to allow heavy visual modification.
 
-* background color
-* background image
-* background video (WHY WOULD YOU DO THIS 😭)
-
-and when you do…
-
-✨ a surprise awaits ✨
-
-(no seriously. it’s not healthy for your eyes. good luck.)
+</details>
 
 ---
 
-## ⚠️ warning / disclaimer / cope section
+<details>
+<summary><b>Project Status</b></summary>
 
-* this is for **beginners**
-* this is NOT vscode
-* this will have bugs
-* things might break
-* i might not fix them 👍
+<br>
 
----
+This project is experimental.
 
-## 🔨 philosophy
+You may encounter:
 
-break it.
-fix it.
-break it again.
-google it.
-question your life choices.
-repeat.
+- Bugs
+- Performance issues
+- Incomplete features
+- Unexpected behavior
 
----
+The project exists  for learning, experimentation, and fun.
 
-## 🧪 why does this exist
-
-idk.
-learning project.
-js + electron moment.
-thought it would be funny. it was.
+</details>
 
 ---
 
-## 🤖 final note
+<details>
+<summary><b>Philosophy</b></summary>
 
-if this felt AI generated
-that’s because it was
+<br>
 
-— ChatGPT
+Build things.  
+Break things.  
+Fix things.  
+Repeat.
+
+</details>
+
+---
+
+<details>
+<summary><b>Built With</b></summary>
+
+<br>
+
+- Electron
+- JavaScript
+- Python
+- pnpm
+
+</details>
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Final Note
+
+Parts of this project were developed with AI assistance.
+
+The bugs were not.
