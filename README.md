@@ -1,4 +1,4 @@
-![SS](./screenshot.png)
+![Demo](./assets/demo.gif)
 
 # No-BS Python IDE
 
@@ -18,6 +18,9 @@ A customizable Python IDE built with Electron.
 > Yes, the background is a video.  
 > Yes, syntax tokens animate.  
 > Yes, this somehow works.
+> Yes, you can customize everything (literally)
+> Yes, it's buggy
+> No, it's NOT perfect
 
 ---
 
