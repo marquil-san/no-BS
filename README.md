@@ -1,5 +1,7 @@
 ![Demo](./assets/demo.gif)
 
+## A gif is being loaded
+
 # No-BS Python IDE
 
 A customizable Python IDE built with Electron.
