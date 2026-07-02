@@ -1,7 +1,5 @@
 ![Demo](./assets/demo.gif)
 
-## A gif is being loaded
-
 # No-BS Python IDE
 
 A customizable Python IDE built with Electron.
@@ -157,7 +155,4 @@ MIT License
 ---
 
 ## Final Note
-
-Parts of this project were developed with AI assistance.
-
-The bugs were not.
+The project was tested and recorded on a 🥔 GPU.
