@@ -1,6 +1,4 @@
-# ⚠️ The demo GIF is ~50 MB and may take a few seconds to load.
 
-![Demo](./assets/demo.gif)
 
 # No-BS Python IDE
 
